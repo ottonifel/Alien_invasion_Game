@@ -17,8 +17,12 @@ def run_game():
     # cria uma espaconave e sua posicao
     ship = Ship(ai_settings, screen)
  
-    # cria um grupo no qual armazena projeteis
+    # cria um grupo no qual armazena projeteis e um para alienigenas
     bullets = Group()
+    aliens = Group()
+
+    # cria a frota de alienigenas
+    gf.create_fleet(ai_settings, screen, ship, aliens)
 
     # Inicia o laço principal do jogo 
     while True:
@@ -32,7 +36,7 @@ def run_game():
         gf.update_bullets(bullets)
         
         # Redesenha a tela a cada passagem do laco
-        gf.update_screen(ai_settings, screen, ship, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
 run_game()
 
