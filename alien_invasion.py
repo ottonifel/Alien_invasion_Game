@@ -33,7 +33,10 @@ def run_game():
         ship.update()
 
         # atualiza posicao das balas (chama o update() de cada instancia de Bullet dentro do Group)
-        gf.update_bullets(bullets)
+        gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
+
+        # atualiza posicao dos alienigenas
+        gf.update_aliens(ai_settings, aliens)
         
         # Redesenha a tela a cada passagem do laco
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
