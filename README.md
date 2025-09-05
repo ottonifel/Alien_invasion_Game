@@ -1,2 +1,2 @@
 # Alien_invasion_Game
-Python Project: alien invasion game from Python Crash Course
+Python Project: alien invasion game from the book Python Crash Course
